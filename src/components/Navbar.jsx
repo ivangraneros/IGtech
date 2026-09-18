@@ -28,6 +28,7 @@ function Navbar({ language, setLanguage, darkMode, setDarkMode }) {
   const handleLinkClick = () => {
     setIsOpen(false);
   }
+  
 
   return (
 

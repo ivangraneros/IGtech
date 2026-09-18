@@ -1,6 +1,6 @@
 import './App.css'
 import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './components/Home'
@@ -8,6 +8,7 @@ import Contacto from './components/Contacto'
 import Servicios from './components/Servicios'
 import Metodologia from './components/Metodologia'
 import WspFlotante from './components/WspFlotante'
+import Scroll from './components/Scroll'
 
 function App() {
   
@@ -22,6 +23,8 @@ function App() {
           darkMode={darkMode} 
           setDarkMode={setDarkMode} />
 
+          <Scroll />
+      
           <Routes>
             <Route path="/" element={<Home language={language} />} />
             <Route path="/contacto" element={<Contacto language={language} />} />
@@ -30,7 +33,9 @@ function App() {
 
             <Route path="/metodologia" element={<Metodologia language={language} />} />
           </Routes>
-          
+        
+
+
       <Footer lang={language} />
 
       <WspFlotante language={language} />

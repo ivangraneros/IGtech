@@ -3,8 +3,8 @@ import React from 'react'
 function WspFlotante({ language}) {
 
 
-    const phoneNumber = "5492257508831"; 
-    const message = language === 'es' 
+  const phoneNumber = "5492257508831"; 
+  const message = language === 'es' 
     ? "Hola, vi tu web IG Tech y quiero consultar por un proyecto." 
     : "Hi, I saw your IG Tech website and I'd like to inquire about a project.";
 
