@@ -31,7 +31,9 @@ function Footer({ lang }) {
         {/* Izquierda: Nombre y frase corta */}
         <div className="footer-brand">
           <div className="navbar-logo">
+            <Link to="/">
             IG<span className="logo-accent">.TECH</span>
+            </Link>
           </div>
           <p className="footer-tagline">{t.tagline}</p>
         </div>

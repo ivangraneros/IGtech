@@ -4,12 +4,9 @@ import Target from './Target'
 import { Link } from 'react-router-dom'
 
 
-
 function Home({ language }) {
 
-  
-   
-    const content = {
+  const content = {
     es: {
       servicesTitle: "Arquitectura & Backend a Medida",
       servicesDesc: "Desarrollo sistemas robustos, bases de datos optimizadas y APIs escalables diseñadas para alto rendimiento.",
@@ -35,12 +32,12 @@ function Home({ language }) {
     ? "Hola, vi tu web IG Tech y quiero consultar por un proyecto." 
     : "Hi, I saw your IG Tech website and I'd like to inquire about a project.";
 
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
 
   return (
     <>
-      <Hero lang={language} />
+      <Hero language={language} />
       
       <section style={{ padding: '5rem 2rem', maxWidth: '1100px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>

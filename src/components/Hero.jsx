@@ -3,26 +3,26 @@ import { Link } from 'react-router-dom';
 
 function Hero({ language }) {
 
-    const content = {
-        es: {
-            badge: "DESARROLLO WEB & BACKEND",
-            title: "Soluciones Digitales de",
-            titleHighlight: "Alto Rendimiento",
-            description: "Diseño y desarrollo arquitecturas backend sólidas, bases de datos optimizadas y aplicaciones web a medida para escalar tu negocio al siguiente nivel.",
-            btnPrimary: "Cotizar Proyecto",
-            btnSecondary: "Ver Servicios"
-        },
-        en: {
-            badge: "WEB & BACKEND DEVELOPMENT",
-            title: "Digital Solutions for",
-            titleHighlight: "High Performance",
-            description: "I design and build robust backend architectures, optimized databases, and custom web applications to scale your business to the next level.",
-            btnPrimary: "Get a Quote",
-            btnSecondary: "View Services"
-        }
-    };
+  const content = {
+    es: {
+      badge: "DESARROLLO WEB & BACKEND",
+      title: "Soluciones Digitales de",
+      titleHighlight: "Alto Rendimiento",
+      description: "Diseño y desarrollo arquitecturas backend sólidas, bases de datos optimizadas y aplicaciones web a medida para escalar tu negocio al siguiente nivel.",
+      btnPrimary: "Cotizar Proyecto",
+      btnSecondary: "Ver Servicios"
+    },
+    en: {
+      badge: "WEB & BACKEND DEVELOPMENT",
+      title: "Digital Solutions for",
+      titleHighlight: "High Performance",
+      description: "I design and build robust backend architectures, optimized databases, and custom web applications to scale your business to the next level.",
+      btnPrimary: "Get a Quote",
+      btnSecondary: "View Services"
+    }
+  };
 
-    const t = content[language] || content['es'];
+  const t = content[language] || content['es'];
 
     
   return (
