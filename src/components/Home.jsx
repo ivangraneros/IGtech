@@ -2,6 +2,7 @@ import '../App.css'
 import Hero from './Hero'
 import Target from './Target'
 import { Link } from 'react-router-dom'
+import Boton from './Boton'
 
 
 function Home({ language }) {
@@ -49,9 +50,9 @@ function Home({ language }) {
               <h3 style={{ fontSize: '1.5rem', margin: '1rem 0' }}>{t.servicesTitle}</h3>
               <p style={{ opacity: 0.8, lineHeight: '1.6', marginBottom: '2rem' }}>{t.servicesDesc}</p>
             </div>
-            <Link to="/servicios" className="btn-secondary-cyber" style={{ textAlign: 'center', textDecoration: 'none' }}>
+            <Boton as={Link} to="/servicios" className="btn-secondary-cyber" style={{ textAlign: 'center', textDecoration: 'none' }}>
               {t.btnServices}
-            </Link>
+            </Boton>
           </div>
 
           {/* Tarjeta Resumen Metodología */}
@@ -61,9 +62,9 @@ function Home({ language }) {
               <h3 style={{ fontSize: '1.5rem', margin: '1rem 0' }}>{t.methodTitle}</h3>
               <p style={{ opacity: 0.8, lineHeight: '1.6', marginBottom: '2rem' }}>{t.methodDesc}</p>
             </div>
-            <Link to="/metodologia" className="btn-secondary-cyber" style={{ textAlign: 'center', textDecoration: 'none' }}>
+            <Boton as={Link} to="/metodologia" className="btn-secondary-cyber" style={{ textAlign: 'center', textDecoration: 'none' }}>
               {t.btnMethod}
-            </Link>
+            </Boton>
           </div>
         </div>
       </section>
@@ -78,16 +79,16 @@ function Home({ language }) {
         </h3>
         <p className="home-contact-sub" style={{ maxWidth: '500px', margin: '0 auto' }}>
           {language === 'es' 
-            ? "Hablemos sobre cómo llevar tus ideas al siguiente nivel. Escribime directo o completá el formulario completo." 
+            ? "Hablemos sobre cómo llevar tus ideas al siguiente nivel. Escribime directo o completá el formulario." 
             : "Let's talk about taking your ideas to the next level. Drop me a line or fill out the full form."}
         </p>
       </div>
 
       <div className="home-contact-actions" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
         
-        <a href="/contacto" className="btn-primary-cyber" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Link to="/contacto" className="btn-primary-cyber" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
           {language === 'es' ? "Ir al Formulario" : "Go to Form"}
-        </a>
+        </Link>
 
         {/* Botón directo a WhatsApp  */}
         <a 

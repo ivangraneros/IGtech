@@ -312,14 +312,13 @@
 }
 
 
-
-/* --- HERO UIVERSE CHASE2K25 PATTERN --- */
+/* --- DOT DISTORTION SHADER BACKGROUND --- */
 .hero-section {
   position: relative;
   overflow: hidden;
 }
 
-.hero-pattern-container {
+.dot-shader-canvas {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -328,55 +327,10 @@
   pointer-events: none;
 }
 
-.pattern-bg {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: repeating-linear-gradient(
-    135deg,
-    #0b0f17 0px,
-    #0b0f17 60px,
-    rgba(11, 15, 23, 0.6) 70px,
-    #1e293b 130px
-  );
-}
-
-.cyber-light .pattern-bg {
-  background: repeating-linear-gradient(
-    135deg,
-    #f1f5f9 0px,
-    #f1f5f9 60px,
-    rgba(241, 245, 249, 0.6) 70px,
-    #e2e8f0 130px
-  );
-}
-
-.cube-svg {
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  left: -30%;
-  top: -20%;
-  background: transparent;
-  opacity: 0.45; /* Graduado para no tapar los textos */
-  z-index: 1;
-  animation: cubeMove 18s linear infinite alternate;
-}
-
-@keyframes cubeMove {
-  from {
-    transform: translateY(0) scale(1);
-  }
-  to {
-    transform: translateY(-20%) scale(1.02) rotate(1deg);
-  }
-}
-
 .hero-content {
   position: relative;
   z-index: 1;
 }
-
 
 /* --- HOME COMPACT CONTACT FORM --- */
 .home-contact-box {
@@ -1049,6 +1003,79 @@
   margin: 0;
 }
 
+/* --- ACETERNITY HOVER EFFECT CARDS --- */
+.hover-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hover-card-wrapper {
+  position: relative;
+  border-radius: 1rem;
+  padding: 2px; /* Espacio para simular el borde brillante */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hover-card-wrapper:hover {
+  transform: translateY(-4px);
+}
+
+/* Efecto en las cards de target */
+.hover-card-background {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background: radial-gradient(
+    400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(6, 182, 212, 0.25),
+    transparent 40%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hover-card-content {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(3, 7, 18, 0.9);
+  border-radius: calc(1rem - 2px);
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cyber-light .hover-card-content {
+  background-color: rgba(241, 245, 249, 0.95);
+}
+
+.hover-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: inherit;
+}
+
+.hover-card-desc {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.hover-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 
 
 
@@ -1253,3 +1280,89 @@
   transform: translateY(-9.5px) rotate(-45deg);
 }
 
+
+
+/* --- MOVING BORDER BUTTON (Estilo Aceternity) --- */
+.moving-border-btn {
+  position: relative;
+  display: inline-flex;
+  padding: 1.5px; /* Grosor del borde brillante */
+  border-radius: 9999px; /* Bordes redondeados tipo píldora (o ajustalos a 12px si preferís más rectos) */
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.moving-border-container {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* ------- botones --------- */
+.moving-border-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    transparent 0%,
+    transparent 65%,
+    rgba(6, 182, 212, 0.4) 85%,
+    #06b6d4 100%
+  );
+  animation: rotate-border 3.5s linear infinite;
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.moving-border-content {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  border-radius: inherit;
+  background-color: rgba(3, 7, 18, 0.95);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.moving-border-btn:hover .moving-border-content {
+  background-color: rgba(3, 7, 18, 0.8);
+}
+
+/* Modo claro (por si usas el theme switch) */
+.cyber-light .moving-border-content {
+  background-color: rgba(241, 245, 249, 0.95);
+  color: #0f172a;
+}
+
+
+/* --- Texto  --- */
+
+.canvas-text-wrapper {
+  background: radial-gradient(circle at center, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+  border-radius: 12px;
+  border: 1px solid rgba(6, 182, 212, 0.15);
+  margin: 1.5rem 0;
+}

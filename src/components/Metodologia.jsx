@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 function Metodologia({ language }) {
 
@@ -127,9 +129,9 @@ function Metodologia({ language }) {
         <p style={{ opacity: 0.8, marginBottom: '2rem', maxWidth: '600px', marginInline: 'auto' }}>
           {t.ctaDesc}
         </p>
-        <a href="/contacto" className="btn-primary-cyber" style={{ textDecoration: 'none', display: 'inline-block' }}>
+        <Link to="/contacto" className="btn-primary-cyber" style={{ textDecoration: 'none', display: 'inline-block' }}>
           {t.ctaButton}
-        </a>
+        </Link>
       </div>
     </div>
   )
