@@ -3,6 +3,8 @@ import Hero from './Hero'
 import Target from './Target'
 import { Link } from 'react-router-dom'
 import Boton from './Boton'
+import Proyecto from './Proyecto'
+import captura from '../assets/captura1.png'
 
 
 function Home({ language }) {
@@ -71,6 +73,9 @@ function Home({ language }) {
 
       <Target language={language} />
 
+      <Proyecto language={language} projectImg={captura} />
+
+
       <div className="cyber-form home-contact-box" style={{ textAlign: 'center', padding: '2rem' }}>
       <div className="home-contact-header" style={{ marginBottom: '1.5rem' }}>
         <span className="hero-badge">{language === 'es' ? "// ACCESO RÁPIDO" : "// FAST TRACK"}</span>
@@ -83,7 +88,7 @@ function Home({ language }) {
             : "Let's talk about taking your ideas to the next level. Drop me a line or fill out the full form."}
         </p>
       </div>
-
+    
       <div className="home-contact-actions" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
         
         <Link to="/contacto" className="btn-primary-cyber" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
