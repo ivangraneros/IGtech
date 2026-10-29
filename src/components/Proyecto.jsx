@@ -6,13 +6,13 @@ function Proyecto({ language, projectImg }) {
     es: {
       badge: "Lanzamiento Reciente",
       title: "Sistema de Cafetería",
-      description: "Un sistema diseñado especialmente para cafeterias que le permite llevar en tiempo real el control total de las mesas y tambien permite el control de la caja.",
+      description: "Un sistema diseñado especialmente para cafeterias que le permite llevar en tiempo real el control total de las mesas y permite el control de la caja. Tambien con sistema de login propio para cada cliente",
       button: "Explorar Demo"
     },
     en: {
       badge: "Latest Release",
       title: "Coffe shop system",
-      description: "A specially designed system for coffe shops that allows you to have full control over the tables and also the coffee box.",
+      description: "A specially designed system for coffe shops that allows you to have full control over the tables and also the coffee box. And includes an own login system for each client",
       button: "Explore Demo"
     }
   };
